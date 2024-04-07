@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #content{
+        width: 200px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px #ddd;
+
+
+    }
+    #content:hover{
+        background-color: chocolate;
+        animation: move 2s infinite alternate;
+    }
+    .text{
+        color: red;
+        font-weight: 800;
+        animation: ease-in 2s all;
+    }
+    @keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+</style>
+<body onload="startClock();">
+    <div id="content">
+       <a href="https://www.google.com.tr" target="_blank" class="text">Google İçin Lütfen Tıklayın</a> 
+    </div>
+</body>
+<script>
+    function startClock(){
+        alert('Hoşgeldiniz Ataymhd')
+}
+if(window.addEventListener) {
+    window.addEventListener('load',startClock,false); //W3C
+}
+        
+</script>
+</html>
