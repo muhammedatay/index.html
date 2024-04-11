@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input id="user" type="text">
+        <select id="ATAYMHD">
+            <option value="mm">Seçiniz</option>
+            <option value="test1">1 Deneme</option>
+            <option value="test2">2 Deneme</option>
+            <option value="test3">3 Deneme</option>
+            <option value="test4">4 Deneme</option>
+            <option value="test5">5 Deneme</option>
+        </select>
+        <button id="go">Giriş</button>
+    </div>
+
+</body>
+<script>
+    var btn = document.getElementById('go');
+    var input = document.getElementById('user');
+    input.addEventListener('input',function (event) {
+        var user = (this.value);
+    })
+    console.log("user",user);
+    btn.addEventListener("click", function () {
+        // Seçilen değeri al
+        var selectedOption = btn.options[btn.selectedIndex].value;
+        // Seçilen değeri span içine yaz
+
+        console.log('Gelen Dt', selectedOption)
+
+        if (selectedOption==='test5' && user.value==='Muhammed') {
+            alert("Giriş Başarılı")
+        }else{
+            alert("Hatalı Şifre Girdiniz")
+        }
+
+
+    });
+
+</script>
+
+</html>
